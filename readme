@@ -1,20 +1,7 @@
 
 Exemple d'utilisation
 
-perl centreon_protocol_http_authtoken.pl --plugin=apps::protocols::http::plugin --mode=json-content --hostname=127.0.0.1 --proto='http' --port='80' --urlpath='/centreon/api/index.php?object=centreon_realtime_services&action=list' --header='Content-Type: application/json' --lookup='*' --authtoken centreon-auth-token --api-username admin --api-password centreon --api-hostname 192.168.43.194
 
+perl centreon_protocol_http_authtoken.pl --plugin=apps::protocols::http::plugin --mode=json-content --hostname=127.0.0.1 --proto='http' --port='80' --urlpath='/centreon/api/index.php?object=centreon_realtime_services&action=list' --header='Content-Type: application/json' --header='toto' --lookup='*' --authtoken centreon-auth-token --api-username admin --api-password centreon --api-hostname 127.0.0.1 --api-username admin --api-password centreon --api-path /centreon/api/index.php?action=authenticate --insecure
 
-
-[root@centreon-central http]# /usr/lib/centreon/plugins/centreon-plugins/centreon_plugins.pl --plugin=apps::protocols::http::plugin --mode=json-content --hostname=127.0.0.1 --proto='http' --port='80' --urlpath='/centreon/api/index.php?object=centreon_realtime_services&action=list' --header='Content-Type: application/json' --header='toto' --lookup='*' --authtoken centreon-auth-token --api-username admin --api-password centreon --api-hostname 127.0.0.1 --api-username admin --api-password centreon --api-path /centreon/api/index.php?action=authenticate --insecure
-$VAR1 = [
-          'Content-Type: application/json',
-          'toto'
-        ];
-$VAR1 = undef;
-$VAR1 = undef;
-$VAR1 = [
-          'centreon-auth-token: Juo267byfkh09jHgCrg1yz9xV1ZZwWqo/NaCwbKVdkA=',
-          'Content-Type: application/json',
-          'toto'
-        ];
 OK: 30 element(s) found | 'count'=30;;;0; 'time'=0.151s;;;0;
